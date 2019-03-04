@@ -453,7 +453,7 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <wsc:getContractImage>\r
-         <contractREF>32132</contractREF>\r
+         <contractREFNO>32132</contractREFNO>\r
       </wsc:getContractImage>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4a909a93-d3ee-4fb9-aa57-0ce3f02c8807"/><con:assertion type="SOAP Fault Assertion" id="78a0ca17-80e4-4aac-9541-c6bac908b549"/><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

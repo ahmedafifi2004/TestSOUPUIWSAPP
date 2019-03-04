@@ -1,0 +1,63 @@
+Status: FAILED
+Time Taken: 264
+Size: 509
+Timestamp: Mon Mar 04 11:07:59 AST 2019
+TestStep: getContractImage4
+
+----------------- Messages ------------------------------
+[Not SOAP Fault] Response is a SOAP Fault
+
+----------------- Properties ------------------------------
+Endpoint: http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService
+Username: weblogic
+Encoding: UTF-8
+Password: Test1234
+
+---------------- Request ---------------------------
+Request Headers: SOAPAction : ""
+Connection : Keep-Alive
+User-Agent : Apache-HttpClient/4.1.1 (java 1.5)
+Host : 172.20.15.248:7005
+Accept-Encoding : gzip,deflate
+Content-Length : 1042
+Content-Type : text/xml;charset=UTF-8
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">
+   <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-99D57296C38FD65CFE15516868799334">
+            <wsse:Username>weblogic</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Test1234</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">v/FUpFgRdxkleCIbLwszjg==</wsse:Nonce>
+            <wsu:Created>2019-03-04T08:07:59.933Z</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <wsc:getContractImage>
+         <contractREF>32132</contractREF>
+      </wsc:getContractImage>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------- Response --------------------------
+Response Headers: Transfer-Encoding : chunked
+X-ORACLE-DMS-ECID : cda005ca-abf7-4350-9f26-1d8ccdb9e451-0000aaca
+#status# : HTTP/1.1 500 Internal Server Error
+Date : Mon, 04 Mar 2019 08:07:58 GMT
+Content-Type : text/xml; charset=utf-8
+
+
+<S:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <S:Body>
+      <ns0:Fault xmlns:ns1="http://www.w3.org/2003/05/soap-envelope" xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/">
+         <faultcode>ns0:Server</faultcode>
+         <faultstring>Server was unable to process request. ---> Value cannot be null.
+Parameter name: String</faultstring>
+         <faultactor/>
+         <detail/>
+      </ns0:Fault>
+   </S:Body>
+</S:Envelope>
