@@ -7,19 +7,19 @@
   <con:entry key="Save After" value="false"/>
   <con:entry key="Add Settings" value="false"/>
   <con:entry key="WSS Password Type" value="Text"/>
-  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="TestSuite" value="OutsideContractInfoServicePortBinding TestSuite"/>
   <con:entry key="Endpoint" value=""/>
   <con:entry key="Select Report Type" value=""/>
   <con:entry key="System Properties" value=""/>
-  <con:entry key="Password" value="Test1234"/>
+  <con:entry key="Password" value=""/>
   <con:entry key="Print Report" value="true"/>
   <con:entry key="Open Report" value="false"/>
   <con:entry key="Export JUnit Results with test properties" value="false"/>
   <con:entry key="Global Properties" value=""/>
   <con:entry key="Project Properties" value=""/>
   <con:entry key="Project Password" value=""/>
-  <con:entry key="TestCase" value="&lt;all>"/>
-  <con:entry key="Username" value="weblogic"/>
+  <con:entry key="TestCase" value="getContractImage TestCase"/>
+  <con:entry key="Username" value=""/>
   <con:entry key="user-settings.xml Password" value=""/>
   <con:entry key="TestRunner Path" value=""/>
   <con:entry key="Environment" value="Default"/>
@@ -435,4 +435,11 @@
          <contractREFNO>20190000846</contractREFNO>\r
       </wsc:getContractImage>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wscontractinfo/OutsideContractInfoService/getContractImageRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wscontractinfo/OutsideContractInfoService/getContractImageRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getContractImage2" id="78045787-680c-488c-95de-873de9c56d9e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OutsideContractInfoServicePortBinding</con:interface><con:operation>getContractImage</con:operation><con:request name="getContractImage2" id="6fc9fb1c-5969-4a7e-b535-8522484e1a61" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsc:getContractImage>\r
+         <contractREFNO>20190000839</contractREFNO>\r
+      </wsc:getContractImage>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="53d76ffe-b5e7-42ea-a728-2641111a86cf"/><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
