@@ -1,8 +1,8 @@
-2019-03-05 11:30:57,267 WARN  [SoapUI] Missing folder [C:\JDeveloper\mywork\TestSOUPUIWSAPP\ext] for external libraries
-2019-03-05 11:30:57,461 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\aafifi\soapui-settings.xml]
-2019-03-05 11:30:57,482 INFO  [HttpClientSupport$Helper] Initializing KeyStore
-2019-03-05 11:30:57,679 ERROR [SoapUI] An error occurred [Probably bad JKS password: java.io.IOException: Keystore was tampered with, or password was incorrect], see error log for details
-2019-03-05 11:30:57,680 ERROR [errorlog] org.apache.commons.ssl.ProbablyBadPasswordException: Probably bad JKS password: java.io.IOException: Keystore was tampered with, or password was incorrect
+2019-03-05 11:56:35,840 WARN  [SoapUI] Missing folder [C:\JDeveloper\mywork\TestSOUPUIWSAPP\ext] for external libraries
+2019-03-05 11:56:35,988 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\aafifi\soapui-settings.xml]
+2019-03-05 11:56:36,006 INFO  [HttpClientSupport$Helper] Initializing KeyStore
+2019-03-05 11:56:36,207 ERROR [SoapUI] An error occurred [Probably bad JKS password: java.io.IOException: Keystore was tampered with, or password was incorrect], see error log for details
+2019-03-05 11:56:36,207 ERROR [errorlog] org.apache.commons.ssl.ProbablyBadPasswordException: Probably bad JKS password: java.io.IOException: Keystore was tampered with, or password was incorrect
 org.apache.commons.ssl.ProbablyBadPasswordException: Probably bad JKS password: java.io.IOException: Keystore was tampered with, or password was incorrect
 	at org.apache.commons.ssl.KeyStoreBuilder.tryJKS(KeyStoreBuilder.java:515)
 	at org.apache.commons.ssl.KeyStoreBuilder.parse(KeyStoreBuilder.java:374)
@@ -43,27 +43,28 @@ org.apache.commons.ssl.ProbablyBadPasswordException: Probably bad JKS password: 
 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
 	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
-2019-03-05 11:30:57,933 INFO  [PluginManager] 0 plugins loaded in 31 ms
-2019-03-05 11:30:57,934 INFO  [DefaultSoapUICore] All plugins loaded
-2019-03-05 11:30:58,399 INFO  [WsdlProject] Loaded project from [file:/C:/JDeveloper/mywork/TestSOUPUIWSAPP/OutsideContractInfoService-soapui-project.xml]
-2019-03-05 11:30:58,404 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [OutsideContractInfoService]
-2019-03-05 11:30:58,405 INFO  [SoapUITestCaseRunner] Running Project [OutsideContractInfoService], runType = SEQUENTIAL
-2019-03-05 11:30:58,414 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [contractImage]
-2019-03-05 11:30:58,418 INFO  [SoapUITestCaseRunner] running step [contractImage1]
-2019-03-05 11:31:00,002 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/xop.xsd with targetNamespace http://www.w3.org/2004/08/xop/include
-2019-03-05 11:31:00,035 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/XMLSchema.xsd with targetNamespace http://www.w3.org/2001/XMLSchema
-2019-03-05 11:31:00,037 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/xml.xsd with targetNamespace http://www.w3.org/XML/1998/namespace
-2019-03-05 11:31:00,037 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/swaref.xsd with targetNamespace http://ws-i.org/profiles/basic/1.1/xsd
-2019-03-05 11:31:00,038 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/xmime200505.xsd with targetNamespace http://www.w3.org/2005/05/xmlmime
-2019-03-05 11:31:00,039 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/xmime200411.xsd with targetNamespace http://www.w3.org/2004/11/xmlmime
-2019-03-05 11:31:00,040 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/soapEnvelope.xsd with targetNamespace http://schemas.xmlsoap.org/soap/envelope/
-2019-03-05 11:31:00,044 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/soapEncoding.xsd with targetNamespace http://schemas.xmlsoap.org/soap/encoding/
-2019-03-05 11:31:00,046 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/soapEnvelope12.xsd with targetNamespace http://www.w3.org/2003/05/soap-envelope
-2019-03-05 11:31:00,050 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/soapEncoding12.xsd with targetNamespace http://www.w3.org/2003/05/soap-encoding
-2019-03-05 11:31:00,051 INFO  [SchemaUtils] Loading schema types from [http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?wsdl]
-2019-03-05 11:31:00,051 INFO  [SchemaUtils] Getting schema http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?wsdl
-2019-03-05 11:31:00,061 INFO  [SchemaUtils] Getting schema http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?xsd=1
-2019-03-05 11:31:00,275 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
-2019-03-05 11:31:00,275 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
-2019-03-05 11:31:00,276 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [contractImage], time taken: 1851ms, status: FINISHED
-2019-03-05 11:31:00,276 INFO  [SoapUITestCaseRunner] Project [OutsideContractInfoService] finished with status [FINISHED] in 1868ms
+2019-03-05 11:56:36,461 INFO  [PluginManager] 0 plugins loaded in 1 ms
+2019-03-05 11:56:36,461 INFO  [DefaultSoapUICore] All plugins loaded
+2019-03-05 11:56:36,924 INFO  [WsdlProject] Loaded project from [file:/C:/JDeveloper/mywork/TestSOUPUIWSAPP/OutsideContractInfoService-soapui-project.xml]
+2019-03-05 11:56:36,929 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [OutsideContractInfoService]
+2019-03-05 11:56:36,930 INFO  [SoapUITestCaseRunner] Running Project [OutsideContractInfoService], runType = SEQUENTIAL
+2019-03-05 11:56:36,943 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [contractImage]
+2019-03-05 11:56:36,955 INFO  [SoapUITestCaseRunner] running step [contractImage1]
+2019-03-05 11:56:38,604 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/xop.xsd with targetNamespace http://www.w3.org/2004/08/xop/include
+2019-03-05 11:56:38,633 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/XMLSchema.xsd with targetNamespace http://www.w3.org/2001/XMLSchema
+2019-03-05 11:56:38,634 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/xml.xsd with targetNamespace http://www.w3.org/XML/1998/namespace
+2019-03-05 11:56:38,635 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/swaref.xsd with targetNamespace http://ws-i.org/profiles/basic/1.1/xsd
+2019-03-05 11:56:38,635 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/xmime200505.xsd with targetNamespace http://www.w3.org/2005/05/xmlmime
+2019-03-05 11:56:38,636 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/xmime200411.xsd with targetNamespace http://www.w3.org/2004/11/xmlmime
+2019-03-05 11:56:38,637 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/soapEnvelope.xsd with targetNamespace http://schemas.xmlsoap.org/soap/envelope/
+2019-03-05 11:56:38,640 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/soapEncoding.xsd with targetNamespace http://schemas.xmlsoap.org/soap/encoding/
+2019-03-05 11:56:38,641 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/soapEnvelope12.xsd with targetNamespace http://www.w3.org/2003/05/soap-envelope
+2019-03-05 11:56:38,644 INFO  [SchemaUtils] Added default schema from file:/C:/Users/aafifi/.m2/repository/com/smartbear/soapui/soapui/5.2.1/soapui-5.2.1.jar!/com/eviware/soapui/resources/xsds/soapEncoding12.xsd with targetNamespace http://www.w3.org/2003/05/soap-encoding
+2019-03-05 11:56:38,644 INFO  [SchemaUtils] Loading schema types from [http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?wsdl]
+2019-03-05 11:56:38,644 INFO  [SchemaUtils] Getting schema http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?wsdl
+2019-03-05 11:56:38,652 INFO  [SchemaUtils] Getting schema http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?xsd=1
+2019-03-05 11:56:38,864 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+2019-03-05 11:56:38,864 INFO  [SoapUITestCaseRunner] Assertion [Not SOAP Fault] has status VALID
+2019-03-05 11:56:38,865 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+2019-03-05 11:56:38,865 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [contractImage], time taken: 1902ms, status: FINISHED
+2019-03-05 11:56:38,866 INFO  [SoapUITestCaseRunner] Project [OutsideContractInfoService] finished with status [FINISHED] in 1933ms
