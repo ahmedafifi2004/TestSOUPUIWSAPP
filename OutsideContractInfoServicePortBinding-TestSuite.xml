@@ -1,30 +1,442 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testSuite id="f26dc3c1-25c1-4faa-989c-5c79f8d34b02" name="OutsideContractInfoServicePortBinding TestSuite" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="24680ee0-c591-47f4-88d1-e201b661d8a4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getContractImage TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="1b03609e-dfda-4d48-b644-5de9fc3069e7" name="getContractImage"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OutsideContractInfoServicePortBinding</con:interface><con:operation>getContractImage</con:operation><con:request name="getContractImage" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="PasswordText" id="2dbc22b5-4422-4310-b7ff-8ba71d9dbf21"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
+<con:soapui-project id="af82726d-03b3-4d55-9d7b-869fd3549897" activeEnvironment="Default" name="OutsideContractInfoService" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value="Text"/>
+  <con:entry key="TestSuite" value="OutsideContractInfoService TestSuite"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="contractImage"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="true"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="d5d117a3-3623-45aa-a0b1-9e1bfb821944" wsaVersion="NONE" name="OutsideContractInfoServicePortBinding" type="wsdl" bindingName="{http://wscontractinfo/}OutsideContractInfoServicePortBinding" soapVersion="1_1" anonymous="optional" definition="http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?wsdl"><con:part><con:url>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?wsdl</con:url><con:content><![CDATA[<definitions name="OutsideContractInfoService" targetNamespace="http://wscontractinfo/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://wscontractinfo/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="wss_username_token_service_policy" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+      <wsp:Policy>
+        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+          <wsp:Policy>
+            <sp:WssUsernameToken10/>
+          </wsp:Policy>
+        </sp:UsernameToken>
+      </wsp:Policy>
+    </sp:SupportingTokens>
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://wscontractinfo/" schemaLocation="http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?xsd=1"/>
+    </xsd:schema>
+  </types>
+  <message name="updateWorkerEntryDate">
+    <part name="parameters" element="tns:updateWorkerEntryDate"/>
+  </message>
+  <message name="updateWorkerEntryDateResponse">
+    <part name="parameters" element="tns:updateWorkerEntryDateResponse"/>
+  </message>
+  <message name="getContractImage">
+    <part name="parameters" element="tns:getContractImage"/>
+  </message>
+  <message name="getContractImageResponse">
+    <part name="parameters" element="tns:getContractImageResponse"/>
+  </message>
+  <message name="manageOutsideWorkerContractInfo">
+    <part name="parameters" element="tns:manageOutsideWorkerContractInfo"/>
+  </message>
+  <message name="manageOutsideWorkerContractInfoResponse">
+    <part name="parameters" element="tns:manageOutsideWorkerContractInfoResponse"/>
+  </message>
+  <message name="manageOutsideWorkerContractInfoWithVisaDetail">
+    <part name="parameters" element="tns:manageOutsideWorkerContractInfoWithVisaDetail"/>
+  </message>
+  <message name="manageOutsideWorkerContractInfoWithVisaDetailResponse">
+    <part name="parameters" element="tns:manageOutsideWorkerContractInfoWithVisaDetailResponse"/>
+  </message>
+  <portType name="OutsideContractInfoService">
+    <operation name="updateWorkerEntryDate">
+      <input message="tns:updateWorkerEntryDate" wsam:Action="http://wscontractinfo/OutsideContractInfoService/updateWorkerEntryDateRequest"/>
+      <output message="tns:updateWorkerEntryDateResponse" wsam:Action="http://wscontractinfo/OutsideContractInfoService/updateWorkerEntryDateResponse"/>
+    </operation>
+    <operation name="getContractImage">
+      <input message="tns:getContractImage" wsam:Action="http://wscontractinfo/OutsideContractInfoService/getContractImageRequest"/>
+      <output message="tns:getContractImageResponse" wsam:Action="http://wscontractinfo/OutsideContractInfoService/getContractImageResponse"/>
+    </operation>
+    <operation name="manageOutsideWorkerContractInfo">
+      <input message="tns:manageOutsideWorkerContractInfo" wsam:Action="http://wscontractinfo/OutsideContractInfoService/manageOutsideWorkerContractInfoRequest"/>
+      <output message="tns:manageOutsideWorkerContractInfoResponse" wsam:Action="http://wscontractinfo/OutsideContractInfoService/manageOutsideWorkerContractInfoResponse"/>
+    </operation>
+    <operation name="manageOutsideWorkerContractInfoWithVisaDetail">
+      <input message="tns:manageOutsideWorkerContractInfoWithVisaDetail" wsam:Action="http://wscontractinfo/OutsideContractInfoService/manageOutsideWorkerContractInfoWithVisaDetailRequest"/>
+      <output message="tns:manageOutsideWorkerContractInfoWithVisaDetailResponse" wsam:Action="http://wscontractinfo/OutsideContractInfoService/manageOutsideWorkerContractInfoWithVisaDetailResponse"/>
+    </operation>
+  </portType>
+  <binding name="OutsideContractInfoServicePortBinding" type="tns:OutsideContractInfoService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference URI="#wss_username_token_service_policy" wsdl:required="false"/>
+    <operation name="updateWorkerEntryDate">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getContractImage">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="manageOutsideWorkerContractInfo">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="manageOutsideWorkerContractInfoWithVisaDetail">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="OutsideContractInfoService">
+    <port name="OutsideContractInfoServicePort" binding="tns:OutsideContractInfoServicePortBinding">
+      <soap:address location="http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService?xsd=1</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10-b140319.1121 svn-revision#7b34660d6bc70e587e8ec81a17e4d76af68816a6.-->
+<xsd:schema targetNamespace="http://wscontractinfo/" xmlns:ns0="http://wscontractinfo/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="workerEntryDateRequest">
+    <xsd:sequence>
+      <xsd:element name="contractREFNO" type="xsd:string"/>
+      <xsd:element name="entryDate" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="contractImageResponse">
+    <xsd:complexContent>
+      <xsd:extension base="ns0:wsResponse">
+        <xsd:sequence>
+          <xsd:element name="contractImage" type="xsd:base64Binary" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="manageOutsideWorkerContractInfo">
+    <xsd:sequence>
+      <xsd:element name="contractInfo" type="ns0:contractInfoRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="manageOutsideWorkerContractInfoResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:contractInfoResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getContractImage">
+    <xsd:sequence>
+      <xsd:element name="contractREFNO" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateWorkerEntryDate">
+    <xsd:sequence>
+      <xsd:element name="workerEntryDate" type="ns0:workerEntryDateRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="contractInfoRequest">
+    <xsd:sequence>
+      <xsd:element name="workerVISANO" type="xsd:string"/>
+      <xsd:element name="signatoryQID" type="xsd:string"/>
+      <xsd:element name="establishmentID" type="xsd:string"/>
+      <xsd:element name="professionCode" type="xsd:string"/>
+      <xsd:element name="contractDate" type="xsd:string"/>
+      <xsd:element name="contractBasicSalary" type="xsd:int"/>
+      <xsd:element name="contractTotalSalary" type="xsd:int"/>
+      <xsd:element name="contractLocation" type="xsd:string"/>
+      <xsd:element name="workerSignImage" type="xsd:base64Binary"/>
+      <xsd:element name="signatorySignImage" type="xsd:base64Binary"/>
+      <xsd:element name="contractDuration" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="contractFoodAllowance" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="contractHosuingAllowance" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="contractOthers" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="contractTransportAllowance" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="educationLevel" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="testPeriod" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="travelDestinationAr" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="travelDestinationEn" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="travelPeriod" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="workerAddressBuilding" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="workerAddressBuildingUnit" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="workerAddressElectricity" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="workerAddressStreet" type="xsd:int" minOccurs="0"/>
+      <xsd:element name="workerAddressZone" type="xsd:int" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="manageOutsideWorkerContractInfoWithVisaDetail">
+    <xsd:sequence>
+      <xsd:element name="contractInfoWithVisaDetail" type="ns0:contractInfoWithVisaDetailRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="wsResponse">
+    <xsd:sequence>
+      <xsd:element name="processExecutionTimestamp" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="processStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="responseCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="responseMsgArb" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="responseMsgEng" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateWorkerEntryDateResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:workerEntryDateResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="contractInfoResponse">
+    <xsd:complexContent>
+      <xsd:extension base="ns0:wsResponse">
+        <xsd:sequence>
+          <xsd:element name="contractImage" type="xsd:base64Binary" minOccurs="0"/>
+          <xsd:element name="contractREFNO" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="manageOutsideWorkerContractInfoWithVisaDetailResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:contractInfoResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="workerEntryDateResponse">
+    <xsd:complexContent>
+      <xsd:extension base="ns0:wsResponse">
+        <xsd:sequence>
+          <xsd:element name="contractREFNO" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="contractInfoWithVisaDetailRequest">
+    <xsd:complexContent>
+      <xsd:extension base="ns0:contractInfoRequest">
+        <xsd:sequence>
+          <xsd:element name="AName1" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="AName2" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="AName3" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="AName4" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="AName5" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="EName1" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="EName2" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="EName3" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="EName4" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="EName5" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="approvalNo" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="birthDate" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="gender" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="natCode" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="visaExpDate" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="visaTypeCode" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="getContractImageResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:contractImageResponse" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="manageOutsideWorkerContractInfoWithVisaDetail" type="ns0:manageOutsideWorkerContractInfoWithVisaDetail"/>
+  <xsd:element name="updateWorkerEntryDateResponse" type="ns0:updateWorkerEntryDateResponse"/>
+  <xsd:element name="manageOutsideWorkerContractInfoResponse" type="ns0:manageOutsideWorkerContractInfoResponse"/>
+  <xsd:element name="manageOutsideWorkerContractInfo" type="ns0:manageOutsideWorkerContractInfo"/>
+  <xsd:element name="updateWorkerEntryDate" type="ns0:updateWorkerEntryDate"/>
+  <xsd:element name="manageOutsideWorkerContractInfoWithVisaDetailResponse" type="ns0:manageOutsideWorkerContractInfoWithVisaDetailResponse"/>
+  <xsd:element name="getContractImage" type="ns0:getContractImage"/>
+  <xsd:element name="getContractImageResponse" type="ns0:getContractImageResponse"/>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint></con:endpoints><con:operation id="21e957e5-71cd-4dba-814a-b549334f6831" isOneWay="false" action="" name="getContractImage" bindingOperationName="getContractImage" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8f243e44-177b-44c3-8571-535e5028166a" name="Request 1" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <wsc:getContractImage>\r
          <contractREFNO>20190000846</contractREFNO>\r
       </wsc:getContractImage>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="0e7ea072-61d6-402a-a615-7131cac69d8f" name="Contains2"><con:configuration><token>ADLSA000</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wscontractinfo/OutsideContractInfoService/getContractImageRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getContractImage2" id="78045787-680c-488c-95de-873de9c56d9e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OutsideContractInfoServicePortBinding</con:interface><con:operation>getContractImage</con:operation><con:request name="getContractImage2" id="6fc9fb1c-5969-4a7e-b535-8522484e1a61" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wscontractinfo/OutsideContractInfoService/getContractImageRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="38a799cc-306c-4a22-b01b-a48e48fcaab0" isOneWay="false" action="" name="manageOutsideWorkerContractInfo" bindingOperationName="manageOutsideWorkerContractInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7e3142d9-970b-4f97-bd2a-3c16ba6ec99e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsc:manageOutsideWorkerContractInfo>\r
+         <!--Optional:-->\r
+         <contractInfo>\r
+            <workerVISANO>?</workerVISANO>\r
+            <signatoryQID>?</signatoryQID>\r
+            <establishmentID>?</establishmentID>\r
+            <professionCode>?</professionCode>\r
+            <contractDate>?</contractDate>\r
+            <contractBasicSalary>?</contractBasicSalary>\r
+            <contractTotalSalary>?</contractTotalSalary>\r
+            <contractLocation>?</contractLocation>\r
+            <workerSignImage>cid:316158093156</workerSignImage>\r
+            <signatorySignImage>cid:123656770729</signatorySignImage>\r
+            <!--Optional:-->\r
+            <contractDuration>?</contractDuration>\r
+            <!--Optional:-->\r
+            <contractFoodAllowance>?</contractFoodAllowance>\r
+            <!--Optional:-->\r
+            <contractHosuingAllowance>?</contractHosuingAllowance>\r
+            <!--Optional:-->\r
+            <contractOthers>?</contractOthers>\r
+            <!--Optional:-->\r
+            <contractTransportAllowance>?</contractTransportAllowance>\r
+            <!--Optional:-->\r
+            <educationLevel>?</educationLevel>\r
+            <!--Optional:-->\r
+            <testPeriod>?</testPeriod>\r
+            <!--Optional:-->\r
+            <travelDestinationAr>?</travelDestinationAr>\r
+            <!--Optional:-->\r
+            <travelDestinationEn>?</travelDestinationEn>\r
+            <!--Optional:-->\r
+            <travelPeriod>?</travelPeriod>\r
+            <!--Optional:-->\r
+            <workerAddressBuilding>?</workerAddressBuilding>\r
+            <!--Optional:-->\r
+            <workerAddressBuildingUnit>?</workerAddressBuildingUnit>\r
+            <!--Optional:-->\r
+            <workerAddressElectricity>?</workerAddressElectricity>\r
+            <!--Optional:-->\r
+            <workerAddressStreet>?</workerAddressStreet>\r
+            <!--Optional:-->\r
+            <workerAddressZone>?</workerAddressZone>\r
+         </contractInfo>\r
+      </wsc:manageOutsideWorkerContractInfo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wscontractinfo/OutsideContractInfoService/manageOutsideWorkerContractInfoRequest"/></con:call></con:operation><con:operation id="e0c5788d-7e34-46a7-86a0-78dcb19f254a" isOneWay="false" action="" name="manageOutsideWorkerContractInfoWithVisaDetail" bindingOperationName="manageOutsideWorkerContractInfoWithVisaDetail" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="90fb5296-71f4-4367-b2b1-6ece132bc81c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsc:manageOutsideWorkerContractInfoWithVisaDetail>\r
+         <!--Optional:-->\r
+         <contractInfoWithVisaDetail>\r
+            <workerVISANO>?</workerVISANO>\r
+            <signatoryQID>?</signatoryQID>\r
+            <establishmentID>?</establishmentID>\r
+            <professionCode>?</professionCode>\r
+            <contractDate>?</contractDate>\r
+            <contractBasicSalary>?</contractBasicSalary>\r
+            <contractTotalSalary>?</contractTotalSalary>\r
+            <contractLocation>?</contractLocation>\r
+            <workerSignImage>cid:35113348699</workerSignImage>\r
+            <signatorySignImage>cid:1148476479387</signatorySignImage>\r
+            <!--Optional:-->\r
+            <contractDuration>?</contractDuration>\r
+            <!--Optional:-->\r
+            <contractFoodAllowance>?</contractFoodAllowance>\r
+            <!--Optional:-->\r
+            <contractHosuingAllowance>?</contractHosuingAllowance>\r
+            <!--Optional:-->\r
+            <contractOthers>?</contractOthers>\r
+            <!--Optional:-->\r
+            <contractTransportAllowance>?</contractTransportAllowance>\r
+            <!--Optional:-->\r
+            <educationLevel>?</educationLevel>\r
+            <!--Optional:-->\r
+            <testPeriod>?</testPeriod>\r
+            <!--Optional:-->\r
+            <travelDestinationAr>?</travelDestinationAr>\r
+            <!--Optional:-->\r
+            <travelDestinationEn>?</travelDestinationEn>\r
+            <!--Optional:-->\r
+            <travelPeriod>?</travelPeriod>\r
+            <!--Optional:-->\r
+            <workerAddressBuilding>?</workerAddressBuilding>\r
+            <!--Optional:-->\r
+            <workerAddressBuildingUnit>?</workerAddressBuildingUnit>\r
+            <!--Optional:-->\r
+            <workerAddressElectricity>?</workerAddressElectricity>\r
+            <!--Optional:-->\r
+            <workerAddressStreet>?</workerAddressStreet>\r
+            <!--Optional:-->\r
+            <workerAddressZone>?</workerAddressZone>\r
+            <!--Optional:-->\r
+            <AName1>?</AName1>\r
+            <!--Optional:-->\r
+            <AName2>?</AName2>\r
+            <!--Optional:-->\r
+            <AName3>?</AName3>\r
+            <!--Optional:-->\r
+            <AName4>?</AName4>\r
+            <!--Optional:-->\r
+            <AName5>?</AName5>\r
+            <!--Optional:-->\r
+            <EName1>?</EName1>\r
+            <!--Optional:-->\r
+            <EName2>?</EName2>\r
+            <!--Optional:-->\r
+            <EName3>?</EName3>\r
+            <!--Optional:-->\r
+            <EName4>?</EName4>\r
+            <!--Optional:-->\r
+            <EName5>?</EName5>\r
+            <!--Optional:-->\r
+            <approvalNo>?</approvalNo>\r
+            <!--Optional:-->\r
+            <birthDate>?</birthDate>\r
+            <!--Optional:-->\r
+            <gender>?</gender>\r
+            <!--Optional:-->\r
+            <natCode>?</natCode>\r
+            <!--Optional:-->\r
+            <visaExpDate>?</visaExpDate>\r
+            <!--Optional:-->\r
+            <visaTypeCode>?</visaTypeCode>\r
+         </contractInfoWithVisaDetail>\r
+      </wsc:manageOutsideWorkerContractInfoWithVisaDetail>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wscontractinfo/OutsideContractInfoService/manageOutsideWorkerContractInfoWithVisaDetailRequest"/></con:call></con:operation><con:operation id="98631607-7a2b-41d5-9938-13710a54f4ec" isOneWay="false" action="" name="updateWorkerEntryDate" bindingOperationName="updateWorkerEntryDate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="edc22431-f3b2-44d8-bfbe-99297cf8cec8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsc:updateWorkerEntryDate>\r
+         <!--Optional:-->\r
+         <workerEntryDate>\r
+            <contractREFNO>?</contractREFNO>\r
+            <entryDate>?</entryDate>\r
+         </workerEntryDate>\r
+      </wsc:updateWorkerEntryDate>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wscontractinfo/OutsideContractInfoService/updateWorkerEntryDateRequest"/></con:call></con:operation></con:interface><con:testSuite id="56c83ffb-79d4-4e0a-815a-c5ff50e7adec" name="OutsideContractInfoService TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c79feb2a-9e3c-48f4-b756-3552b1efa61b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="contractImage" searchProperties="true"><con:settings/><con:testStep type="request" name="contractImage1" id="17487bfc-c2ad-4c94-bf55-1652fa6956b3"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OutsideContractInfoServicePortBinding</con:interface><con:operation>getContractImage</con:operation><con:request name="contractImage1" id="134794b3-15aa-4b9b-8a91-fc6339d1fd83" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.245:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <wsc:getContractImage>\r
-         <contractREFNO>20190000839</contractREFNO>\r
+         <contractREFNO>20190000846</contractREFNO>\r
       </wsc:getContractImage>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="53d76ffe-b5e7-42ea-a728-2641111a86cf"/><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getContractImage3" id="ca5f75ec-77af-4f11-819c-8caab091dd54"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OutsideContractInfoServicePortBinding</con:interface><con:operation>getContractImage</con:operation><con:request name="getContractImage3" id="901ad637-dfda-4940-9455-dd64db69bdc3" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <wsc:getContractImage>\r
-         <contractREF>20180000824</contractREF>\r
-      </wsc:getContractImage>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f0c8165e-c3bd-473a-9241-38da03f9292d"/><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getContractImage4" id="818595e1-b0dd-4a0a-8581-7e762110cecc"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>OutsideContractInfoServicePortBinding</con:interface><con:operation>getContractImage</con:operation><con:request name="getContractImage4" id="cb6dc00d-ea4f-40f7-a8a8-2b7e49af2123" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://172.20.15.248:7005/ManageContractWS/OutsideContractInfoService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsc="http://wscontractinfo/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <wsc:getContractImage>\r
-         <contractREFNO>32132</contractREFNO>\r
-      </wsc:getContractImage>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4a909a93-d3ee-4fb9-aa57-0ce3f02c8807"/><con:assertion type="SOAP Fault Assertion" id="78a0ca17-80e4-4aac-9541-c6bac908b549"/><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite>
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="72a8b01e-04a4-43ec-a219-cc3b0fca8b13" name="responseCode"><con:configuration><token>ADLSA000</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="e962a0d3-a730-4bdc-a66e-d839e31bc5d7" name="Not SOAP Fault"/><con:assertion type="XPath Match" id="6ea4bd9b-7c71-4074-b153-efafac891752" name="XPath Match"><con:configuration><path>declare namespace env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace xop='http://www.w3.org/2004/08/xop/include';
+declare namespace S='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns0='http://wscontractinfo/';
+exists(//ns0:getContractImageResponse/return/contractImage)</path><content>true</content><allowWildcards>true</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="SOAP Response" id="d2e0ee02-cc69-4b07-b6b3-a216b04b1f29"/><con:credentials><con:username>weblogic</con:username><con:password>Test1234</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

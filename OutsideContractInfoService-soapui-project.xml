@@ -435,7 +435,7 @@
          <contractREFNO>20190000846</contractREFNO>\r
       </wsc:getContractImage>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="72a8b01e-04a4-43ec-a219-cc3b0fca8b13" name="responseCode"><con:configuration><token>ADLSA000</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="e962a0d3-a730-4bdc-a66e-d839e31bc5d7" name="Not SOAP Fault"/><con:assertion type="XPath Match" id="6ea4bd9b-7c71-4074-b153-efafac891752" name="XPath Match"><con:configuration><path>declare namespace env='http://schemas.xmlsoap.org/soap/envelope/';
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="72a8b01e-04a4-43ec-a219-cc3b0fca8b13" name="responseCode"><con:configuration><token>ADLSA001</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="e962a0d3-a730-4bdc-a66e-d839e31bc5d7" name="Not SOAP Fault"/><con:assertion type="XPath Match" id="6ea4bd9b-7c71-4074-b153-efafac891752" name="XPath Match"><con:configuration><path>declare namespace env='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace xop='http://www.w3.org/2004/08/xop/include';
 declare namespace S='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace ns0='http://wscontractinfo/';
