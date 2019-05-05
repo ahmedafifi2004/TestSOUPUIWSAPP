@@ -1,0 +1,42 @@
+Status: FAILED
+Time Taken: 1179
+Size: 0
+Timestamp: Sun May 05 08:40:20 AST 2019
+TestStep: getMainorsAffairsDetails
+
+----------------- Messages ------------------------------
+org.apache.http.conn.HttpHostConnectException: Connection to http://127.0.0.1:7101 refused
+
+----------------- Properties ------------------------------
+Encoding: UTF-8
+Password: welcome1
+Username: weblogic
+Endpoint: http://127.0.0.1:7101/MinorsAffairstWS/MinorsAffairsWebService
+
+---------------- Request ---------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsm="http://wsminorsaffairs/">
+   <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-3BC20FB6AFB4C8F4EF15570348204701">
+            <wsse:Username>weblogic</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">welcome1</wsse:Password>
+            <wsse:Nonce EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary">2nwEsTQHm6MLP0UAxmCDPQ==</wsse:Nonce>
+            <wsu:Created>2019-05-05T05:40:20.468Z</wsu:Created>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <wsm:getMainorsAffairsDetails>
+         <!--Optional:-->
+         <mARequestInfo>
+            <!--Optional:-->
+            <issuemonth>04/2017</issuemonth>
+            <!--Optional:-->
+            <qid>29963400632</qid>
+         </mARequestInfo>
+      </wsm:getMainorsAffairsDetails>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------- Response --------------------------
+- missing response / garbage collected -

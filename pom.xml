@@ -20,7 +20,8 @@
                 <artifactId>soapui-maven-plugin</artifactId>
                 <version>5.2.1</version>
                 <configuration>
-                    <projectFile>OutsideContractInfoService-soapui-project.xml</projectFile>
+                   
+                    <projectFile>MinorsAffairsWebService-soapui-project.xml</projectFile>
                 </configuration>
                 <dependencies>
                 <dependency>

@@ -1,0 +1,6 @@
+#surefire
+#Tue Apr 30 10:46:00 AST 2019
+user.dir=C\:\\JDeveloper\\mywork\\TestSOUPUIWSAPP\\Client
+localRepository=C\:\\Users\\aafifi\\.m2\\repository
+env.ORACLE_HOME=C\:\\Oracle\\Middleware1213\\Oracle_Home
+basedir=C\:\\JDeveloper\\mywork\\TestSOUPUIWSAPP\\Client

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a6909c00-9e5c-42c5-a53b-c764a5e554b1" activeEnvironment="Default" name="MinorsAffairsWebService" resourceRoot="${projectDir}" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="1a7967c8-7af4-490a-b5ae-9e22679b13f0" wsaVersion="NONE" name="MinorsAffairsWebServicePortBinding" type="wsdl" bindingName="{http://wsminorsaffairs/}MinorsAffairsWebServicePortBinding" soapVersion="1_1" anonymous="optional" definition="http://127.0.0.1:7101/MinorsAffairstWS/MinorsAffairsWebService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://127.0.0.1:7101/MinorsAffairstWS/MinorsAffairsWebService?wsdl"><con:part><con:url>http://127.0.0.1:7101/MinorsAffairstWS/MinorsAffairsWebService?wsdl</con:url><con:content><![CDATA[<definitions name="MinorsAffairsWebService" targetNamespace="http://wsminorsaffairs/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://wsminorsaffairs/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="wss_username_token_service_policy" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+      <wsp:Policy>
+        <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+          <wsp:Policy>
+            <sp:WssUsernameToken10/>
+          </wsp:Policy>
+        </sp:UsernameToken>
+      </wsp:Policy>
+    </sp:SupportingTokens>
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://wsminorsaffairs/" schemaLocation="http://127.0.0.1:7101/MinorsAffairstWS/MinorsAffairsWebService?xsd=1"/>
+    </xsd:schema>
+  </types>
+  <message name="getMainorsAffairsDetails">
+    <part name="parameters" element="tns:getMainorsAffairsDetails"/>
+  </message>
+  <message name="getMainorsAffairsDetailsResponse">
+    <part name="parameters" element="tns:getMainorsAffairsDetailsResponse"/>
+  </message>
+  <portType name="MinorsAffairsWebService">
+    <operation name="getMainorsAffairsDetails">
+      <input message="tns:getMainorsAffairsDetails" wsam:Action="http://wsminorsaffairs/MinorsAffairsWebService/getMainorsAffairsDetailsRequest"/>
+      <output message="tns:getMainorsAffairsDetailsResponse" wsam:Action="http://wsminorsaffairs/MinorsAffairsWebService/getMainorsAffairsDetailsResponse"/>
+    </operation>
+  </portType>
+  <binding name="MinorsAffairsWebServicePortBinding" type="tns:MinorsAffairsWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference URI="#wss_username_token_service_policy" wsdl:required="false"/>
+    <operation name="getMainorsAffairsDetails">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="MinorsAffairsWebService">
+    <port name="MinorsAffairsWebServicePort" binding="tns:MinorsAffairsWebServicePortBinding">
+      <soap:address location="http://127.0.0.1:7101/MinorsAffairstWS/MinorsAffairsWebService"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://127.0.0.1:7101/MinorsAffairstWS/MinorsAffairsWebService?xsd=1</con:url><con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.3.0-b170407.2038 svn-revision#2eaca54d17a59d265c6fe886b7fd0027836c766c.-->
+<xsd:schema targetNamespace="http://wsminorsaffairs/" xmlns:ns0="http://wsminorsaffairs/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="getMainorsAffairsDetails">
+    <xsd:sequence>
+      <xsd:element name="mARequestInfo" type="ns0:minorsAffairsRequest" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getMainorsAffairsDetailsResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:minorsAffairsRespone" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="minorsAffairsRequest">
+    <xsd:sequence>
+      <xsd:element name="issuemonth" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="qid" type="xsd:long" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="minorsAffairsRespone">
+    <xsd:complexContent>
+      <xsd:extension base="ns0:wsResponse">
+        <xsd:sequence>
+          <xsd:element name="details" type="ns0:minorsAffairsDetails" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+          <xsd:element name="issuemonth" type="xsd:string" minOccurs="0"/>
+          <xsd:element name="qid" type="xsd:long" minOccurs="0"/>
+          <xsd:element name="totalAmount" type="xsd:decimal" minOccurs="0"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="wsResponse">
+    <xsd:sequence>
+      <xsd:element name="processExecutionTimestamp" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="processStatus" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="responseCode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="responseMsgArb" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="responseMsgEng" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="minorsAffairsDetails">
+    <xsd:sequence>
+      <xsd:element name="amount" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="bnkname" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="coverperiodfrom" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="coverperiodto" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="exprdate" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="fullname" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="iban" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="issuemonth" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="prdcode" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="prdname" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="qid" type="xsd:long" minOccurs="0"/>
+      <xsd:element name="salexec" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="status" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="suspdate" type="xsd:dateTime" minOccurs="0"/>
+      <xsd:element name="suspreason" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getMainorsAffairsDetails" type="ns0:getMainorsAffairsDetails"/>
+  <xsd:element name="getMainorsAffairsDetailsResponse" type="ns0:getMainorsAffairsDetailsResponse"/>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://127.0.0.1:7101/MinorsAffairstWS/MinorsAffairsWebService</con:endpoint></con:endpoints><con:operation id="3a848531-fce3-4979-9f21-b34f13c59d0f" isOneWay="false" action="" name="getMainorsAffairsDetails" bindingOperationName="getMainorsAffairsDetails" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ccf85cb-e6a5-4954-a48e-7d4f94414461" name="Request 1" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.17.41:7005/MinorsAffairsService/MinorsAffairsWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsm="http://wsminorsaffairs/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsm:getMainorsAffairsDetails>\r
+         <!--Optional:-->\r
+         <mARequestInfo>\r
+            <!--Optional:-->\r
+            <issuemonth>04/2017</issuemonth>\r
+            <!--Optional:-->\r
+            <qid>29963400632</qid>\r
+         </mARequestInfo>\r
+      </wsm:getMainorsAffairsDetails>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>ADLSAWSTEST</con:username><con:password>ADLSAWSTEST123</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wsminorsaffairs/MinorsAffairsWebService/getMainorsAffairsDetailsRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="2a82f9f0-b461-447a-a0ce-6db745fbe342" name="Request 2" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.17.41:7005/MinorsAffairsService/MinorsAffairsWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsm="http://wsminorsaffairs/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsm:getMainorsAffairsDetails>
+         <!--Optional:-->
+         <mARequestInfo>
+            <!--Optional:-->
+        
+            <!--Optional:-->
+            <qid>29963400632</qid>
+         </mARequestInfo>
+      </wsm:getMainorsAffairsDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>weblogic</con:username><con:password>welcome1</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wsminorsaffairs/MinorsAffairsWebService/getMainorsAffairsDetailsRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="b8acfeeb-c7d9-45f0-827c-26ed5cc4d548" name="MinorsAffairsWebServicePortBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="abf763e7-5ac8-4134-bf76-76c6906a0446" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getMainorsAffairsDetails TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="36873848-881e-434f-ad53-5b3c34324a37" name="getMainorsAffairsDetails"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MinorsAffairsWebServicePortBinding</con:interface><con:operation>getMainorsAffairsDetails</con:operation><con:request name="getMainorsAffairsDetails" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="PasswordText" id="94fb9ce2-3558-4e97-9b7e-294f60bc625f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.17.41:7005/MinorsAffairsService/MinorsAffairsWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsm="http://wsminorsaffairs/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <wsm:getMainorsAffairsDetails>\r
+         <!--Optional:-->\r
+         <mARequestInfo>\r
+            <!--Optional:-->\r
+            <issuemonth>04/2017</issuemonth>\r
+            <!--Optional:-->\r
+            <qid>29963400632</qid>\r
+         </mARequestInfo>\r
+      </wsm:getMainorsAffairsDetails>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Fault Assertion" id="25c9f87b-c78b-420b-a4a6-2f033987665b" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="46592e14-9aae-498b-a04e-d9b99468f72d" name="Contains"><con:configuration><token>ADLSA000</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="daa18525-6da5-4036-b8f2-4c220ba53118" name="Contains 1"><con:configuration><token>&lt;totalAmount>23460&lt;/totalAmount></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="a8dff7b7-049a-4082-b1c9-d0baa8ef47f5" name="XPath Match"><con:configuration><path>declare namespace env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns0='http://wsminorsaffairs/';
+declare namespace S='http://schemas.xmlsoap.org/soap/envelope/';
+exists(//ns0:getMainorsAffairsDetailsResponse/return/issuemonth)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="a5e5015e-2ca5-4b13-bf7c-9cd9e832cdc5" name="XPath Match 1"><con:configuration><path>declare namespace env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns0='http://wsminorsaffairs/';
+declare namespace S='http://schemas.xmlsoap.org/soap/envelope/';
+exists(//ns0:getMainorsAffairsDetailsResponse/return/qid)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="a1dbab33-ff0c-43fd-ada5-c7c967340d75" name="XPath Match 2"><con:configuration><path>declare namespace env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns0='http://wsminorsaffairs/';
+declare namespace S='http://schemas.xmlsoap.org/soap/envelope/';
+count(//ns0:getMainorsAffairsDetailsResponse/return/details)</path><content>8</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="41374dbd-a86f-4a1e-90cb-34b57f7a8a13" name="XPath Match 3"><con:configuration><path>declare namespace env='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace ns0='http://wsminorsaffairs/';
+declare namespace S='http://schemas.xmlsoap.org/soap/envelope/';
+//ns0:getMainorsAffairsDetailsResponse/return/totalAmount</path><content>23460</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username>ADLSAWSTEST</con:username><con:password>ADLSAWSTEST123</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://wsminorsaffairs/MinorsAffairsWebService/getMainorsAffairsDetailsRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="mandatoryFields" id="440a8680-1dd8-40a5-8872-cbd518042962"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MinorsAffairsWebServicePortBinding</con:interface><con:operation>getMainorsAffairsDetails</con:operation><con:request name="mandatoryFields" id="7d2336d2-da7f-4e00-bf47-3904faaf4b49" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.17.41:7005/MinorsAffairsService/MinorsAffairsWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsm="http://wsminorsaffairs/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsm:getMainorsAffairsDetails>
+         <!--Optional:-->
+         <mARequestInfo>
+            <!--Optional:-->
+        
+            <!--Optional:-->
+            <qid>29963400632</qid>
+         </mARequestInfo>
+      </wsm:getMainorsAffairsDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="61137b4d-6e46-474a-86c9-a0fd3f022387"/><con:assertion type="Simple Contains" id="37b48951-6698-4e76-b3c3-eedbe8d830ed" name="Contains"><con:configuration><token>ADLSA003</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="SOAP Fault Assertion" id="cdbd3334-b684-4487-98c2-60cc4d835a11" name="Not SOAP Fault"/><con:credentials><con:username>ADLSAWSTEST</con:username><con:password>ADLSAWSTEST123</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="noDataFound" id="d9eaf4f5-ae0a-4d50-b820-05ec7867a814"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MinorsAffairsWebServicePortBinding</con:interface><con:operation>getMainorsAffairsDetails</con:operation><con:request name="noDataFound" id="16b8593b-e846-418b-b71a-149648b22ba2" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.17.41:7005/MinorsAffairsService/MinorsAffairsWebService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsm="http://wsminorsaffairs/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsm:getMainorsAffairsDetails>
+         <!--Optional:-->
+         <mARequestInfo>
+            <!--Optional:-->
+            <issuemonth>12/2017</issuemonth>
+            <!--Optional:-->
+            <qid>29963400611</qid>
+         </mARequestInfo>
+      </wsm:getMainorsAffairsDetails>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9009367c-2f81-4d66-9a86-c6558a5f1331"/><con:assertion type="SOAP Fault Assertion" id="8ab30958-b914-463b-b2ff-36a084e62c94" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="39c40235-ec49-4bc0-8a4f-a02908b404e8" name="Contains"><con:configuration><token>ADLSA001</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>ADLSAWSTEST</con:username><con:password>ADLSAWSTEST123</con:password><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
